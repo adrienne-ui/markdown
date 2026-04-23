@@ -1,7 +1,5 @@
 # Pubmatic
 
-![Pubmatic Segment Synchronization](https://raw.githubusercontent.com/adrienne-ui/markdown/main/pubmatic_segment_synchro.png)
-
 ## Data Inventory Segments
 
 ### Taxonomy Synchronization
@@ -60,3 +58,23 @@ For each URL we send back:
 We should **not** need to update the endpoint IP because we have allocated an **Elastic IP**.
 
 If we need to change anything, we need to contact **Marc Canal** by mail.
+
+![Pubmatic Segment Synchronization](https://raw.githubusercontent.com/adrienne-ui/markdown/main/pubmatic_segment_synchro.png)
+
+---
+
+## Reporting Data
+
+### Qwarry Serverless Production: Move Pubmatic Reports
+
+| Detail | Value |
+|--------|-------|
+| Lambda Function | `qwarry-serverless-production-movePubmaticReports` |
+| Schedule | Runs daily at 5 PM |
+
+### Pubmatic Curate
+
+- **Athena Console:** [Access Athena Table Details](https://console.aws.amazon.com/athena)
+- **S3 Location:** [View S3 Bucket](https://console.aws.amazon.com/s3)
+
+![Pubmatic Reporting Workflow](https://raw.githubusercontent.com/adrienne-ui/markdown/main/Pubmatic%20Reporting%20Workflow-2026-03-03-063338.png)
