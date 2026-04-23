@@ -2,8 +2,6 @@
 
 ## Contextual Segments
 
-![Taxonomie](taxonomie.png)
-
 Segments are created by uploading a CSV file to a Google Storage bucket.
 
 The CSV file is generated through the Lambda function `generateSmartTaxonomy` from the `qwarry-serverless` project, triggered every **Saturday at midnight**.
@@ -31,11 +29,11 @@ There is a complex hierarchy coded on our side with pricing attribution. Some cl
 
 <https://github.com/Qwarry/qwarry-serverless/blob/main/functions/generateTaxonomy/equativ/equativSegmentAttribute.js>
 
+![Taxonomie](https://raw.githubusercontent.com/adrienne-ui/markdown/main/taxonomie.png)
+
 ---
 
 ## Segments Data Synchronization
-
-![Segments Data Synchronization](data-sychronisation-2026-03-03-060351.png)
 
 As of 11 Feb 2026, 1 proxy and 2 nodes, we reply at a rate of ~2500 RPS.
 
@@ -46,13 +44,13 @@ Grafana monitoring — "Neogmentor Tiers":
 
 We send back for each URL an object `{ Segments: [...] }`.
 
+![Segments Data Synchronization](https://raw.githubusercontent.com/adrienne-ui/markdown/main/data-sychronisation-2026-03-03-060351.png)
+
 We should not need to update the endpoint IP because we have allocated an Elastic IP. But if we need to change anything, we need to go by mail to **Audrey Ferrand** and **Athenaïs**.
 
 ---
 
 ## Audiences Synchronization
-
-![Audiences Synchronization](audience-synchronisation.png)
 
 The AWS Batch job `firstids-augmentor-job` produces, along with AVRO files, CSV files that are immediately uploaded to Google Storage (Equativ side).
 
@@ -63,11 +61,13 @@ gs://profile_importer_audience_eu_prod/qwarry/87648f8c-fe2d-4a16-81eb-7321b5208d
 ...
 ```
 
+![Audiences Synchronization](https://raw.githubusercontent.com/adrienne-ui/markdown/main/audience-synchronisation.png)
+
 ---
 
 ## Reporting Data
 
-![Reporting](reporting.png)
+![Reporting](https://raw.githubusercontent.com/adrienne-ui/markdown/main/reporting.png)
 
 The reporting of the curated deals is done every morning at **6am** in the Lambda:
 `qwarry-serverless-production-moveEquativCurateReports`
