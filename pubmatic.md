@@ -1,6 +1,6 @@
 # Pubmatic
 
-![Pubmatic Segment Synchronization](images/pubmatic_segment_synchro.png)
+![Pubmatic Segment Synchronization](https://raw.githubusercontent.com/adrienne-ui/markdown/main/pubmatic_segment_synchro.png)
 
 ## Data Inventory Segments
 
